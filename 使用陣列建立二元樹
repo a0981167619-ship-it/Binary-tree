@@ -1,0 +1,7 @@
+btree=[None]*1024
+btree[1]='S'
+btree[2]='i'
+btree[3]='m'
+btree[4]='p'
+btree[5]='l'
+btree[6]='e'
