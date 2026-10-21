@@ -1,0 +1,31 @@
+class node: #使用指標建立二元樹
+    def binary_tree(sef,value):
+        sef.val=value
+        sef.left=None
+        sef.right=None
+    def set_left(sef,left):
+        sef.left=left
+    def set_right(sef,right):
+        sef.right=right
+
+t1=node('A')
+root=t1
+t2=node('B')
+t3=node('C')
+t4=node('D')
+t5=node('E')
+t6=node('F')
+t7=node('G')
+t8=node('H')
+t9=node('I')
+t10=node('J')
+
+t1.set_left(t2)
+t2.set_left(t3)
+t1.set_right(t4)
+t4.set_left(t5)
+t4.set_right(t6)
+t3.set_left(t7)
+t3.set_right(t8)
+t6.set_left(t9)
+t6.set_right(t10)
