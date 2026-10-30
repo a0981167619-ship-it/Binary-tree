@@ -1,0 +1,27 @@
+btree=[None]*1024 #建立字元陣列
+btree[0]='1'
+btree[1]='2'
+btree[3]='16'
+btree[5]='126'
+btree[6]='2048'
+btree[10]='4096'
+
+def preorder(p): #前序走訪(1.顯示節點資料 2.走訪左子樹 3.走訪右子樹)
+    if btree[p]: #若陣列元素的資料為0
+        print(btree[p],'  ',end=' ')
+        preorder(2*p) #進行左子樹走訪
+        preorder(2*p+1) #進行右子樹走訪
+
+def inorder(p): #中序走訪 (1.走訪左子樹 2.顯示節點資料 3.走訪右子樹)
+    if btree[p]:
+        inorder(2*p)
+        print(btree[p],'  ',end='  ')
+        inorder(2*p+1)
+
+def postorder(p): #後序走訪(1.走訪左子樹  2.走訪右子樹  3.顯示節點資料)
+    if btree[p]:
+        postorder(2*p)
+        postorder(2*p+1)
+        print(btree[p],'  ',end='  ')
+
+       
