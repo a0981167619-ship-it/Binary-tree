@@ -1,0 +1,41 @@
+class node:
+    def __init__(self,value):
+        self.val=value #儲存節點的資料
+        self.left=None #指向左子節點
+        self.right=None #指向右子節點
+
+    def set_left(self,left):
+        self.left=left
+    def set_right(self,right):
+        self.right=right
+
+t1=node('1')
+root=t1 #令t1為根節點
+
+t2=node('2')
+t3=node('3')
+t4=node('4')
+t5=node('5')
+t6=node('6')
+
+#建立二元樹
+
+t1.set_left(t2)
+t2.set_left(t3)
+t3.set_left(t4)
+t3.set_right(t5)
+t5.set_left(t6)
+
+#輸出二元樹
+def print_tree(node,level=0): #二元樹從0層開始計算
+    if node is None: #判斷是否為空節點
+        return 
+    print_tree(node.right,level+1) ##找目前節點的右子節點
+    print(" "*level+str(node.val))                           #依照右、root、左的順序
+    print_tree(node.left,level+1)  #找目前節點的左子節點
+
+print_tree(root)
+    
+
+
+
