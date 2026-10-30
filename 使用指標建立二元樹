@@ -1,10 +1,10 @@
 class node:
-    def  binary_tree(sef,value):
-        sef.val=value
-        sef.left=None
-        sef.right=None
-    def set_left(sef,left):
-        sef.left=left
-    def set_right(sef,right)
-        sef.right=right
+    def  __init__(self,value):
+        self.val=value
+        self.left=None
+        self.right=None
+    def set_left(self,left):
+        self.left=left
+    def set_right(self,right):
+        self.right=right
         
