@@ -1,10 +1,10 @@
 btree=[None]*1024 #建立字元陣列
 btree[0]='1'
 btree[1]='2'
-btree[3]='16'
-btree[5]='126'
-btree[6]='2048'
-btree[10]='4096'
+btree[2]='16'
+btree[3]='126'
+btree[4]='2048'
+btree[5]='4096'
 
 def preorder(p): #前序走訪(1.顯示節點資料 2.走訪左子樹 3.走訪右子樹)
     if btree[p]: #若陣列元素的資料為0
@@ -24,4 +24,14 @@ def postorder(p): #後序走訪(1.走訪左子樹  2.走訪右子樹  3.顯示�
         postorder(2*p+1)
         print(btree[p],'  ',end='  ')
 
-       
+preorder(1) #從btree[1]以前序方式走訪二元樹
+print() #輸出換行
+inorder(1) #從btree[1]以中序方式走訪二元樹
+print()
+postorder(1) #從btree[1]以後序方式走訪二元樹
+print()
+        
+        
+
+
+
