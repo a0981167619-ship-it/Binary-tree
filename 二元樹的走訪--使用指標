@@ -1,0 +1,52 @@
+class Binary_tree:
+    def __init__(self,value):
+        self.val=value #儲存節點資料
+        self.left=None #指向左子節點
+        self.right=None #指向右子節點
+
+    def set_left(self,left):
+        self.left=left
+
+    def set_right(self,right):
+        self.right=right
+
+r1=Binary_tree('A')
+root=r1
+r2=Binary_tree('B')
+r3=Binary_tree('C')
+r4=Binary_tree('D')
+r5=Binary_tree('E')
+r6=Binary_tree('F')
+r1.set_left(r2)
+r1.set_right(r3)
+r2.set_left(r4)
+r2.set_right(r5)
+r3.set_left(r6)
+
+def preorder(p): #前序走訪
+    if p:
+        print(p.val) #顯示節點資料
+        preorder(p.left) #走訪左子樹
+        preorder(p.right) #走訪右子樹
+
+def inorder(p):  #中序走訪
+    if p:
+     inorder(p.left) #走訪左子樹
+     print(p.val) #顯示節點資料
+     inorder(p.right) #走訪右子樹
+
+def postorder(p):  #後序走訪
+    if p:
+        postorder(p.left) #走訪左子樹
+        postorder(p.right) #走訪右子樹
+        print(p.val) #顯示節點資料
+
+preorder(root) #把root傳入
+print()
+inorder(root)
+print()
+postorder(root)
+print()
+
+
+        
